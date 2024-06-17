@@ -8,14 +8,16 @@ class DynamoDbHighRwCapacity(BaseResourceCheck):
         description = "Ensure that DynamoDB tables do not use high read/write capacity"
 
         # This is the Unique ID for your check
-        id = "CKV_AWS_368"
+        id = "CKV_AWS_802"
 
         # These are the terraform objects supported by this check (ex: aws_iam_policy_document)
         supported_resources = ['aws_dynamodb_table']
 
+        guideline = 'https://search-rug.github.io/iac-cost-patterns/aws-expensive-dynamodb/'
+
         # Valid CheckCategories are defined in checkov/common/models/enums.py
         categories = [CheckCategories.CONVENTION]
-        super().__init__(name=description, id=id, categories=categories, supported_resources=supported_resources)
+        super().__init__(name=description, id=id, categories=categories, supported_resources=supported_resources, guideline=guideline)
 
     def scan_resource_conf(self, conf):
         # read_capacity and write_capacity are ignored in PAY_PER_REQUEST MODE
