@@ -16,7 +16,7 @@ class DynamoDbNoGlobalSecondaryIndex(BaseResourceCheck):
         guideline = 'https://search-rug.github.io/iac-cost-patterns/aws-expensive-dynamodb/'
 
         # Valid CheckCategories are defined in checkov/common/models/enums.py
-        categories = [CheckCategories.IAM]
+        categories = [CheckCategories.CONVENTION]
         super().__init__(name=description, id=id, categories=categories, supported_resources=supported_resources, guideline=guideline)
 
     def scan_resource_conf(self, conf):
