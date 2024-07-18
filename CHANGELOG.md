@@ -1,6 +1,31 @@
 # CHANGELOG
 
-## [Unreleased](https://github.com/bridgecrewio/checkov/compare/3.2.186...HEAD)
+## [Unreleased](https://github.com/bridgecrewio/checkov/compare/3.2.193...HEAD)
+
+## [3.2.193](https://github.com/bridgecrewio/checkov/compare/3.2.191...3.2.193) - 2024-07-17
+
+### Bug Fix
+
+- **terraform:** fix failures of no caller on definition context - [#6573](https://github.com/bridgecrewio/checkov/pull/6573)
+- **terraform:** TFPlan + TF fixes for google_project_iam_policy + google_iam_policy - [#6577](https://github.com/bridgecrewio/checkov/pull/6577)
+
+## [3.2.191](https://github.com/bridgecrewio/checkov/compare/3.2.190...3.2.191) - 2024-07-16
+
+### Bug Fix
+
+- **general:** fix sca unit tests for python 3.12 - [#6574](https://github.com/bridgecrewio/checkov/pull/6574)
+
+## [3.2.190](https://github.com/bridgecrewio/checkov/compare/3.2.189...3.2.190) - 2024-07-15
+
+- no noteworthy changes
+
+## [3.2.189](https://github.com/bridgecrewio/checkov/compare/3.2.186...3.2.189) - 2024-07-14
+
+### Feature
+
+- **arm:** add CKV_AZURE_169 to ensure that AKS use the Paid Sku for its SLA - [#6545](https://github.com/bridgecrewio/checkov/pull/6545)
+- **arm:** add CKV_AZURE_177 to ensure that Windows VM enables automatic updates - [#6484](https://github.com/bridgecrewio/checkov/pull/6484)
+- **cloudformation:** Update audit_logs valid values - [#6566](https://github.com/bridgecrewio/checkov/pull/6566)
 
 ## [3.2.186](https://github.com/bridgecrewio/checkov/compare/3.2.183...3.2.186) - 2024-07-11
 
