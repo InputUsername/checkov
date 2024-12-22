@@ -10,7 +10,8 @@ class S3BucketLifecycleRules(BaseResourceCheck):
         id = "CKV_AWS_805"
         supported_resources = ["AWS::S3::Bucket"]
         categories = [CheckCategories.LOGGING]
-        super().__init__(name=name, id=id, categories=categories, supported_resources=supported_resources)
+        guideline = "https://search-rug.github.io/iac-cost-patterns/object-storage-lifecycle-rules/"
+        super().__init__(name=name, id=id, categories=categories, supported_resources=supported_resources, guideline=guideline)
 
     def scan_resource_conf(self, conf):
         properties = conf.get('Properties')

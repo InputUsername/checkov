@@ -10,7 +10,8 @@ class DynamoDbPayPerRequest(BaseResourceCheck):
         id = "CKV_AWS_806"
         supported_resources = ["AWS::DynamoDB::Table"]
         categories = [CheckCategories.CONVENTION]
-        super().__init__(name=name, id=id, categories=categories, supported_resources=supported_resources)
+        guideline = "https://search-rug.github.io/iac-cost-patterns/aws-expensive-dynamodb/"
+        super().__init__(name=name, id=id, categories=categories, supported_resources=supported_resources, guideline=guideline)
 
     def scan_resource_conf(self, conf):
         properties = conf.get('Properties')
