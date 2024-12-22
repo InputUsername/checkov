@@ -9,7 +9,7 @@ class DynamoDbPayPerRequest(BaseResourceCheck):
         name = "Ensure that a DynamoDB table uses pay-per-request billing"
         id = "CKV_AWS_806"
         supported_resources = ["AWS::DynamoDB::Table"]
-        categories = [CheckCategories.LOGGING]
+        categories = [CheckCategories.CONVENTION]
         super().__init__(name=name, id=id, categories=categories, supported_resources=supported_resources)
 
     def scan_resource_conf(self, conf):
